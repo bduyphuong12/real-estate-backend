@@ -11,15 +11,15 @@ const DATABASE_URL = process.env.MONGODB_CONNECTION_LOCALHOST_URL;
 const { DATABASE } = process.env;
 const DATABASE_NAME = process.env.DB_NAME;
 export const databaseConfig = {
-  DATABASE_NAME,
-  DATABASE_URL,
-  DATABASE,
+    DATABASE_NAME,
+    DATABASE_URL,
+    DATABASE
 };
 
 const apiKey = process.env.HERE_GEOCODING_API_KEY;
 const appId = process.env.HERE_GEOCODING_APP_ID;
 
 export const mapConfig = {
-  apiKey,
-  appId,
+    apiKey,
+    appId
 };

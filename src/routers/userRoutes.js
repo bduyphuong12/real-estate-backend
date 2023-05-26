@@ -15,22 +15,22 @@ userRouter.use(authController.protect);
 userRouter.patch('/updateMyPassword', authController.updatePassword);
 userRouter.get('/profile', userController.getMe, userController.getUser);
 userRouter.patch(
-  '/profile',
-  upload.single('profileImage'),
-  userController.updateMe
+    '/profile',
+    upload.single('profileImage'),
+    userController.updateMe
 );
 userRouter.route('/').get(userController.getAllUsers);
 userRouter
-  .route('/:id')
-  .get(userController.getUser)
-  .delete(userController.deleteUser);
+    .route('/:id')
+    .get(userController.getUser)
+    .delete(userController.deleteUser);
 
 // nested router for user
 userRouter
-  .route('/me/conversations')
-  .get(conversationController.getConversationByUserId);
+    .route('/me/conversations')
+    .get(conversationController.getConversationByUserId);
 userRouter.route('/me/estates').get(estateController.getEstateByOwner);
 userRouter
-  .route('/me/wishesList')
-  .get(wishesListController.getWishesListByUser);
+    .route('/me/wishesList')
+    .get(wishesListController.getWishesListByUser);
 export default userRouter;
