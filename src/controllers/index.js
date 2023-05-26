@@ -3,46 +3,46 @@ import { getAllOrderStatus } from './orderStatus.controller.js';
 import { getAllEstateStatus } from './estateStatus.controller.js';
 import { getAllEstateType } from './estateType.controller.js';
 import {
-    createEstate,
-    getAllEstate,
-    getInfoEstate,
-    deleteEstate,
-    updateEstate,
-    getEstateByOwner,
-    findNearEstate,
-    updateStatusEstate
+  createEstate,
+  getAllEstate,
+  getInfoEstate,
+  deleteEstate,
+  updateEstate,
+  getEstateByOwner,
+  findNearEstate,
+  updateStatusEstate,
 } from './estate.controller.js';
 
 const roleController = {
-    getAllRoles
+  getAllRoles,
 };
 
 const orderStatusController = {
-    getAllOrderStatus
+  getAllOrderStatus,
 };
 
 const estateStatusController = {
-    getAllEstateStatus
+  getAllEstateStatus,
 };
 
 const estateTypeController = {
-    getAllEstateType
+  getAllEstateType,
 };
 const estateController = {
-    createEstate,
-    getAllEstate,
-    getInfoEstate,
-    deleteEstate,
-    updateEstate,
-    getEstateByOwner,
-    findNearEstate,
-    updateStatusEstate
+  createEstate,
+  getAllEstate,
+  getInfoEstate,
+  deleteEstate,
+  updateEstate,
+  getEstateByOwner,
+  findNearEstate,
+  updateStatusEstate,
 };
 
 export {
-    roleController,
-    orderStatusController,
-    estateStatusController,
-    estateTypeController,
-    estateController
+  roleController,
+  orderStatusController,
+  estateStatusController,
+  estateTypeController,
+  estateController,
 };

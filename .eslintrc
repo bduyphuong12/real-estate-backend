@@ -1,7 +1,7 @@
 {
   "env": {
-    "node": true,
     "browser": true,
+    "node": true,
     "es6": true
   },
   "extends": ["eslint:recommended", "plugin:prettier/recommended"],
@@ -19,12 +19,10 @@
     "no-underscore-dangle": "off",
     "class-methods-use-this": "off",
     "prefer-destructuring": ["error", { "object": true, "array": false }],
-    "no-unused-vars": [
-      "error",
-      { "argsIgnorePattern": "req|res|next|val|err" }
-    ],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val|err" }],
     "linebreak-style": ["error"]
   },
+
   "parser": "@babel/eslint-parser",
   "parserOptions": {
     "sourceType": "module",
@@ -32,5 +30,10 @@
     "requireConfigFile": false,
     "allowImportExportEverywhere": true,
     "plugins": ["importAssertions"]
+
   }
 }
+
+  
+ 
+

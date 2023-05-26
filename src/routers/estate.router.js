@@ -14,9 +14,9 @@ estateRouter.post('/nearestEstate', estateController.findNearEstate);
 estateRouter.get('/', estateController.getAllEstate);
 estateRouter.route('/:estateId/comments', commentController.getCommentByEstate);
 estateRouter.get(
-    '/:id',
-    estateMiddleware.checkExistanceEstate,
-    estateController.getInfoEstate
+  '/:id',
+  estateMiddleware.checkExistanceEstate,
+  estateController.getInfoEstate
 );
 estateRouter.get('/:estateId/comments', commentController.getCommentByEstate);
 estateRouter.use(authController.protect);
@@ -24,22 +24,22 @@ estateRouter.use('/:estateId/wishesLists', wishesListRouter);
 estateRouter.post('/', uploader.multifile, estateController.createEstate);
 estateRouter.use('/:estateId/comments', commentRouter);
 estateRouter.delete(
-    '/:id',
-    estateMiddleware.checkExistanceEstate,
-    estateMiddleware.checkIsOwner,
-    estateController.deleteEstate
+  '/:id',
+  estateMiddleware.checkExistanceEstate,
+  estateMiddleware.checkIsOwner,
+  estateController.deleteEstate
 );
 estateRouter.post(
-    '/:estateId/conversations',
-    setEstateUserIds,
-    conversationController.createConversation
+  '/:estateId/conversations',
+  setEstateUserIds,
+  conversationController.createConversation
 );
 estateRouter.patch(
-    '/:id',
-    estateMiddleware.checkExistanceEstate,
-    estateMiddleware.checkIsOwner,
-    uploader.multifile,
-    estateController.updateEstate
+  '/:id',
+  estateMiddleware.checkExistanceEstate,
+  estateMiddleware.checkIsOwner,
+  uploader.multifile,
+  estateController.updateEstate
 );
 estateRouter.patch('/:id/updateStatus', estateController.updateStatusEstate);
 

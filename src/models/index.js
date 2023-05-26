@@ -10,14 +10,14 @@ import OrderStatusModel from './orderStatus.js';
 import RoleModel from './role.js';
 
 export {
-    UserModel,
-    ActionModel,
-    EstateModel,
-    EstateTypeModel,
-    wishesListModel,
-    OrderModel,
-    CommentModel,
-    EstateStatusModel,
-    OrderStatusModel,
-    RoleModel
+  UserModel,
+  ActionModel,
+  EstateModel,
+  EstateTypeModel,
+  wishesListModel,
+  OrderModel,
+  CommentModel,
+  EstateStatusModel,
+  OrderStatusModel,
+  RoleModel,
 };

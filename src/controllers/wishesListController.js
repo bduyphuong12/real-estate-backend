@@ -11,31 +11,31 @@ const updateWishesList = factory.updateOne(wishesListModel);
 const deleteWishesList = factory.deleteOne(wishesListModel);
 
 const getWishesListByUser = catchAsync(async (req, res, next) => {
-    const user = req.user.id;
+  const user = req.user.id;
 
-    const features = new APIFeatures(
-        wishesListModel.find({ user: user }),
-        req.query
-    )
-        .filter()
-        .sort()
-        .limitFields()
-        .paginate();
-    const doc = await features.query;
-    res.status(status.OK).json({
-        message: status[status.OK],
-        data: {
-            records: doc,
-            total: doc.length
-        }
-    });
+  const features = new APIFeatures(
+    wishesListModel.find({ user: user }),
+    req.query
+  )
+    .filter()
+    .sort()
+    .limitFields()
+    .paginate();
+  const doc = await features.query;
+  res.status(status.OK).json({
+    message: status[status.OK],
+    data: {
+      records: doc,
+      total: doc.length,
+    },
+  });
 });
 const wishesListController = {
-    getAllWishesList,
-    getWishesList,
-    createWishesList,
-    updateWishesList,
-    deleteWishesList,
-    getWishesListByUser
+  getAllWishesList,
+  getWishesList,
+  createWishesList,
+  updateWishesList,
+  deleteWishesList,
+  getWishesListByUser,
 };
 export default wishesListController;
